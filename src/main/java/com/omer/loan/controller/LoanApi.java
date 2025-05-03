@@ -1,6 +1,5 @@
 package com.omer.loan.controller;
 
-import com.ekiziltan.loan.dto.*;
 import com.omer.loan.dto.*;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.format.annotation.DateTimeFormat;

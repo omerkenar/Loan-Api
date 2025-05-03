@@ -71,7 +71,7 @@ It uses **Spring Boot** to create a **RESTful API** with **JWT** authentication.
 loan-api
 ├── src
 │   ├── main
-│   │   ├── java/com/ekiziltan/loan
+│   │   ├── java/com/omer/loan
 │   │   │   ├── config
 │   │   │   │   ├── security
 │   │   │   ├── controller
@@ -88,7 +88,7 @@ loan-api
 │   │       ├── application-prod.yml
 │   │       
 │   └── test
-│       └── java/com/ekiziltan/loan
+│       └── java/com/omer/loan
 ├── Dockerfile
 ├── docker-compose.yml (optional)
 ├── .dockerignore
@@ -349,8 +349,8 @@ jwt:
     <version>0.8.11</version>
     <configuration>
         <excludes>
-            <exclude>com/ekiziltan/**/ExcludedPOJO.class</exclude>
-            <exclude>com/ekiziltan/**/*DTO.*</exclude>
+            <exclude>com/omer/**/ExcludedPOJO.class</exclude>
+            <exclude>com/omer/**/*DTO.*</exclude>
             <exclude>**/config/*</exclude>
             <exclude>**/entity/*</exclude>
         </excludes>
@@ -434,7 +434,7 @@ Where:
 The **`InstallmentAmountCalculator`** class utilizes this formula to calculate the final amount for each installment, adjusting for any early payment discounts or late payment penalties.
 
 ```java
-package com.ekiziltan.loan.service.pay;
+package com.omer.loan.service.pay;
 
 import entity.com.omer.loan.LoanInstallment;
 import org.springframework.stereotype.Component;
@@ -514,7 +514,7 @@ loanApplicationLockService.createLock(request.getCustomerId());
 **Security Configuration:**
 
 ```java
-package com.ekiziltan.loan.config.security;
+package com.omer.loan.config.security;
 
 import com.omer.loan.config.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
@@ -651,7 +651,7 @@ The project includes a **DatabaseInitializer** that populates the database with 
 ### **DatabaseInitializer Class:**
 
 ```java
-package com.ekiziltan.loan.config.security;
+package com.omer.loan.config.security;
 
 import entity.com.omer.loan.Customer;
 import repository.com.omer.loan.CustomerRepository;
@@ -748,7 +748,7 @@ The application ensures that **customers can only access and modify their own lo
 ### **Security Configuration:**
 
 ```java
-package com.ekiziltan.loan.config.security;
+package com.omer.loan.config.security;
 
 import com.omer.loan.config.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
@@ -830,7 +830,7 @@ The **loan listing** feature leverages **Spring Data JPA Specifications** to pro
 ### **Implementation in Service Layer:**
 
 ```java
-package com.ekiziltan.loan.service;
+package com.omer.loan.service;
 
 import dto.com.omer.loan.LoanDTO;
 import dto.com.omer.loan.LoanListForCustomerRequest;

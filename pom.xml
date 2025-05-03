@@ -134,8 +134,8 @@
 				<version>${jacoco.version}</version>
 				<configuration>
 					<excludes>
-						<exclude>com/ekiziltan/**/ExcludedPOJO.class</exclude>
-						<exclude>com/ekiziltan/**/*DTO.*</exclude>
+						<exclude>com/omer/**/ExcludedPOJO.class</exclude>
+						<exclude>com/omer/**/*DTO.*</exclude>
 						<exclude>**/config/*</exclude>
 						<exclude>**/entity/*</exclude>
 					</excludes>

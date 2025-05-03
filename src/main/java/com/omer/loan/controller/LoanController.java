@@ -1,6 +1,5 @@
 package com.omer.loan.controller;
 
-import com.ekiziltan.loan.dto.*;
 import com.omer.loan.dto.*;
 import com.omer.loan.service.InstallmentListService;
 import com.omer.loan.service.pay.InstallmentPayService;
