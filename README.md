@@ -436,7 +436,7 @@ The **`InstallmentAmountCalculator`** class utilizes this formula to calculate t
 ```java
 package com.ekiziltan.loan.service.pay;
 
-import com.ekiziltan.loan.entity.LoanInstallment;
+import entity.com.omer.loan.LoanInstallment;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -516,6 +516,7 @@ loanApplicationLockService.createLock(request.getCustomerId());
 ```java
 package com.ekiziltan.loan.config.security;
 
+import com.omer.loan.config.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.*;
 import org.springframework.security.config.Customizer;
@@ -652,8 +653,8 @@ The project includes a **DatabaseInitializer** that populates the database with 
 ```java
 package com.ekiziltan.loan.config.security;
 
-import com.ekiziltan.loan.entity.Customer;
-import com.ekiziltan.loan.repository.CustomerRepository;
+import entity.com.omer.loan.Customer;
+import repository.com.omer.loan.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
@@ -749,6 +750,7 @@ The application ensures that **customers can only access and modify their own lo
 ```java
 package com.ekiziltan.loan.config.security;
 
+import com.omer.loan.config.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.*;
 import org.springframework.security.config.Customizer;
@@ -830,12 +832,13 @@ The **loan listing** feature leverages **Spring Data JPA Specifications** to pro
 ```java
 package com.ekiziltan.loan.service;
 
-import com.ekiziltan.loan.dto.LoanDTO;
-import com.ekiziltan.loan.dto.LoanListForCustomerRequest;
-import com.ekiziltan.loan.entity.Loan;
-import com.ekiziltan.loan.repository.LoanRepository;
-import com.ekiziltan.loan.repository.specifications.LoanSpecifications;
-import com.ekiziltan.loan.utils.mapper.LoanMapper;
+import dto.com.omer.loan.LoanDTO;
+import dto.com.omer.loan.LoanListForCustomerRequest;
+import entity.com.omer.loan.Loan;
+import repository.com.omer.loan.LoanRepository;
+import specifications.repository.com.omer.loan.LoanSpecifications;
+import com.omer.loan.service.LoansListForCustomerService;
+import com.omer.loan.utils.mapper.LoanMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
