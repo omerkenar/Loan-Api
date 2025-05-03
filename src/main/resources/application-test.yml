@@ -5,8 +5,8 @@ spring:
       path: /h2-console
   datasource:
     url: jdbc:postgresql://localhost:5432/omer
-    username: postgres
-    password: 123
+    username: changeMe
+    password: changeMe
     hikari:
       maximum-pool-size: 10
       minimum-idle: 2
